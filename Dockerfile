@@ -6,5 +6,6 @@ RUN curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | pytho
 RUN rm *.zip
 
 ENV HOME /root
+ENV LANG C.UTF-8
 
 WORKDIR /root
