@@ -1,9 +1,7 @@
-FROM yandex/ubuntu
+FROM yandex/trusty
 
 # install python3
-RUN apt-add-repository ppa:fkrull/deadsnakes -y && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install python3.4 -y
-RUN curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python3.4
-RUN rm *.zip
+RUN apt-add-repository ppa:fkrull/deadsnakes -y && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install python3-pip -yy
 
 ENV HOME /root
 ENV LANG C.UTF-8
